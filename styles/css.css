@@ -1,0 +1,81 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+
+/* Styles Global */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1rem;
+}
+
+/* Navbar */
+
+nav{
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.nav-toggle{
+    font-size: 1.5rem;
+     color: #FF731D; /* hsl(205, 78%, 60%); */
+    background: transparent;
+    border-color: transparent;
+    transition:  all 0.3s linear;
+    cursor: pointer;
+}
+
+.nav-toggle:hover{
+    color:  hsl(205, 78%, 60%);
+    transform: rotate(90deg);
+}
+
+.logo{
+    height: 40px;
+}
+
+.links a {
+    color: hsl(209, 34%, 30%);
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: all 0.3s linear;
+
+}
+
+.links a:hover {
+    background:  hsl(205, 86%, 81%);
+     color: #FF731D; /* hsl(205, 78%, 60%); */
+     padding-left: 1.5rem;
+}
+
+.social-icons{
+    display: none;
+}
+
+.links{
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+}
+
+.show-links{
+    height: 10rem;
+}
+
+
