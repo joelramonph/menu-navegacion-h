@@ -4,6 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Lora:ital,wght@0,400;0,700;1,500;1,600&family=Roboto:wght@300;400;700&display=swap');
 /* Styles Global */
 
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Lora:ital,wght@0,400;0,700;1,500;1,600&family=Open+Sans:wght@300;400;500;600;700&family=Roboto:wght@300;400;700&display=swap');
+
 *,
 *::before,
 *::after{
@@ -13,9 +16,10 @@
 }
 
 body {
+  margin: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100%;
   font-size: 1rem;
  
 }
@@ -155,6 +159,7 @@ background-position: 25% 30% ;
   padding: 2rem 0 1.5rem 0;
   /* margin-bottom: 3rem; */
   font-size: 1.9rem;
+  font-family: 'Open Sans', sans-serif;
   color:   hsl(209, 34%, 30%);
 }
 
@@ -167,7 +172,8 @@ background-position: 25% 30% ;
 
 .description-text p{
   margin-bottom: 1rem;
-  letter-spacing: 0.2rem;
+  /* letter-spacing: 0.2rem; */
+  font-family: 'Open Sans', sans-serif;
 }
 /* Cards */
 
@@ -213,11 +219,11 @@ background-position: 25% 30% ;
 
 .card-description{
   padding: 20px 15px 10px;
-  font-size: 1rem;
-  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  font-family: 'Open Sans', sans-serif;
   background: white;
   text-align: left;
-  letter-spacing: 0.2rem;
+  /* letter-spacing: 0.2rem; */
   color: hsl(209, 34%, 30%);
 
 }
@@ -261,9 +267,15 @@ small {
 }
 
 
-.img-card{
+ .img-card{
   max-width: 260px;
+} 
+
+
+.img-activity{
+  width: 100%;
 }
+
 
 /* Router */
 
@@ -292,18 +304,111 @@ cards-items-container{
 .card-item-title{
  
   font-size: 1rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0 0 0.6rem;
 }
 
 .card-item-description{
  
   font-size: 1rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   
 }
-footer{
-  background-color: teal;
+
+/* footer */
+
+section {
+  /* position: fixed;
+  left: 0; */
+  bottom: 12px;
+  width: 100%;
+  background: #172940;
+  padding-top: 60px;
+}
+
+footer {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 0 30px;
+  color: #a2b5cd;
+}
+
+footer > img {
+  margin-top: 10px;
+}
+
+footer.top {
+  border-bottom: 2px solid #3a4f6a;
+  padding-bottom: 20px;
+}
+
+footer.bottom {
+  padding: 20px 0;
+  justify-content: space-between;
+}
+
+footer.top .links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.links > div {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+footer h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #f7f7f7;
+}
+
+.legal {
+  font-size: 12px;
+}
+
+.legal > a {
+  margin: 0 4px;
+}
+
+.legal > span {
+  margin-right: 10px;
+}
+
+footer.bottom .links {
+  display: flex;
+  gap: 18px;
+}
+
+footer.bottom .links > a {
+  font-size: 24px;
+}
+
+.learning-activity-container{
+  display: flex;
+  flex-direction: column;
+  padding-top: 3.1rem;
+  border-bottom: 5px solid red;
+  padding-bottom: 3.1rem;
+}
+
+.learning-activity{
+  text-align: center;
+  padding: 1rem 1.2rem;
+}
+
+.learning-activity-title{
+  margin: 0 0 1rem 0;
+  
+}
+
+.learning-activity-text{
+  text-align: left;
+  margin: 0 0 1rem 0;
 }
 
 /* media query */
@@ -376,5 +481,113 @@ footer{
 
   .description-text p{
     padding: 0 16px;
+   
+  }
+  .img-activity{
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+     object-position: bottom; 
+    
+  }
+
+  .activity{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .cursos{
+    order: -1;
+  }
+
+  .incubadora{
+    order: -1;
+  }
+
+  .learning-activity{
+    
+    width: 50%;
+    padding: 2rem 1.5rem 2rem 1.5rem;
+   
+    
+  }
+
+  .learning-activity-title{
+    text-align:left
+  }
+
+  .learning-activity-text{
+    text-align: justify;
+    line-height: 1.5rem;
+    font-size: 0.9rem ;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+
+
+
+  .activity-container-image{
+    width: 50%;
+   
   }
 }
+
+
+
+/* footer */
+
+@media (width < 620px) {
+  footer {
+    flex-direction: column;
+  }
+
+  footer.bottom {
+    gap: 16px;
+    flex-direction: column-reverse;
+  }
+}
+
+
+@media (width >= 620px) {
+
+  .containers-cards{
+    flex-direction: row;
+  }
+  footer {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0;
+  }
+}
+
+
+@media (width < 420px) {
+  footer {
+    text-align: center;
+    align-items: center;
+  }
+
+  footer.top .links {
+    grid-template-columns: 1fr;
+  }
+
+  footer.bottom {
+    align-items: center;
+  }
+
+  .legal > span {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 2px;
+  }
+
+  
+  
+}
+
+
+
+
+
+
+
